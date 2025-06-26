@@ -9,7 +9,7 @@ services:
       - "80:80"
       - "443:443"
     networks:
-      - net-2
+      - net_2
 
   grepp-db:
     image: mysql
@@ -25,7 +25,8 @@ services:
       - net_2
 
   grepp-app:
-    image: grepp-app:0.3
+#    image: ghcr.io/min0962/2025_grepp_infra_back:sha-29126f8
+    image: grepp-app:0.2
     container_name: grepp-app
 #    ports:
 #      - "8080:8080"
